@@ -28,6 +28,4 @@ This SourceMod plugin brings the "wings" mechanic from Counter-Strike 2 into CS:
 
 ## Repository Structure
 - `csgo_wings.sp` - The SourceMod plugin source code.
-- `generate_icons.py` - A Python script used to duplicate the base wings icon for every weapon.
-- `inairkill.svg` - The base wings icon template.
-- `materials/` - The generated SVG icons that the game client needs to render the killfeed.
+- `materials/` - The hand-crafted merged SVG icons that the game client needs to render the killfeed.
