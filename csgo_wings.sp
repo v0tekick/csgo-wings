@@ -32,11 +32,18 @@ public void OnPluginStart()
 
 public void OnMapStart()
 {
-    char filePath[256];
+    char filePathSVG[256];
+    char filePathVSVG[256];
+    
     for (int i = 0; i < sizeof(g_WeaponClasses); i++)
     {
-        Format(filePath, sizeof(filePath), "materials/panorama/images/icons/equipment/%s_inair.svg", g_WeaponClasses[i]);
-        AddFileToDownloadsTable(filePath);
+        // Add the .svg file
+        Format(filePathSVG, sizeof(filePathSVG), "materials/panorama/images/icons/equipment/%s_inair.svg", g_WeaponClasses[i]);
+        AddFileToDownloadsTable(filePathSVG);
+        
+        // Add the .vsvg file
+        Format(filePathVSVG, sizeof(filePathVSVG), "materials/panorama/images/icons/equipment/%s_inair.vsvg", g_WeaponClasses[i]);
+        AddFileToDownloadsTable(filePathVSVG);
     }
 }
 
